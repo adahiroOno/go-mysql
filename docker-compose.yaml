@@ -28,6 +28,8 @@ services:
       - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
     ports:
       - 3306:3306
+    cap_add:
+      - SYS_NICE
 
 volumes:
   db-data:
